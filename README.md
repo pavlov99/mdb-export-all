@@ -5,7 +5,11 @@ Export all of the tables from Microsoft Access database to CSV
 
 [mdbtools](https://github.com/brianb/mdbtools). There are packages for linux (`apt-get install mdbtools`) and macos (`brew install mdbtools`)
 
-Then copy mdb-export-all.sh to local ~/bin folder.
+# Usage
+
+```bash
+bash mdb-export-all.sh full-path-to-ms-access-db.accdb
+```
 
 ## Development
 
