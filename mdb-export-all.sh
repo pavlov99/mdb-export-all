@@ -17,7 +17,8 @@ dbname=${filename%.*}
 
 mkdir "$dbname"
 
-for table in $(mdb-tables "$fullfilename"); do
+IFS=$'\n'
+for table in $(mdb-tables -1 "$fullfilename"); do
     echo "Export table $table"
     mdb-export "$fullfilename" "$table" > "$dbname/$table.csv"
 done
